@@ -1,3 +1,4 @@
 ---
 es:
-  recently_viewed_products: "Recientemente Vistos Productos"
+  spree:
+    recently_viewed_products: "Recientemente Vistos Productos"

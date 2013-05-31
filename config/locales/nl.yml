@@ -1,3 +1,4 @@
 ---
 nl:
-  recently_viewed_products: "Recent Bekeken Producten"
+  spree:
+    recently_viewed_products: "Recent Bekeken Producten"
