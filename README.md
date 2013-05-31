@@ -25,7 +25,7 @@ NOTE: No migrations are required for this extension. You're done, move along now
 ## Contributing
 
 * Fork the repo
-* Clone your repo `git clone git@github.com:mrhelpful/spree-unifaun.git`
+* Clone your repo `git clone git@github.com:mrhelpful/spree_recently_viewed.git`
 * Create branch for your pull request `git checkout -b fix-something`
 * Run `bundle`
 * Run `bundle exec rake test_app` to create the test application in `spec/dummy`
