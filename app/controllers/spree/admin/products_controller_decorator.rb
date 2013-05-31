@@ -1,7 +1,7 @@
-Spree::ProductsController.class_eval do
+Spree::Admin::ProductsController.class_eval do
   include ::Spree::BaseHelper
 
-  after_filter :recently_viewed, :only => :show
+  after_filter :recently_viewed, only: :show
 
   def recently_viewed
     item = @product.class.name  + '-' + @product.id.to_s
@@ -14,5 +14,4 @@ Spree::ProductsController.class_eval do
     rvp.delete_at(0) if rvp.size > rvp_max_count.to_i
     session['recently_viewed_products'] = rvp.join(',')
   end
-
 end
