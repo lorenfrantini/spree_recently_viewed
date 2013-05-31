@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Spree::Product do
-  before(:each) do
-    3.times { Factory(:product) }
+  before do
+    3.times { create(:product) }
   end
 
-  describe "Spree::Product.find_by_array_of_ids" do
+  context "Spree::Product.find_by_array_of_ids" do
     it "should return the products specified in the array of product ids" do
       product_ids = Spree::Product.limit(2).map(&:id)
       products = Spree::Product.find_by_array_of_ids(product_ids)
