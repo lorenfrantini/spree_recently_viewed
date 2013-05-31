@@ -1,7 +1,7 @@
 Spree::BaseHelper.module_eval do
 
   def get_recently_viewed_product_ids
-    #session.fetch("recently_viewed_products", "").split(', ')
+    # session.fetch('recently_viewed_products', '').split(', ')
     rvp = session.fetch('recently_viewed_products', [])
     rvp = rvp.split(',') unless rvp.is_a? Array
     rvp
@@ -30,8 +30,6 @@ Spree::BaseHelper.module_eval do
       next if product.nil?
       rvp[p_map.find_index(product.class.name + '-' + product.id.to_s)] = product
     end
-
     rvp
   end
-
 end
