@@ -1,7 +1,7 @@
 <% if get_recently_viewed_products.any? %>
   <nav id="recently_viewed_products" class="sidebar-item">
     <h6 class="product-section-title"><%= Spree.t(:recently_viewed_products) %></h6>
-    <ul id="recently_viewed_products">
+    <ul>
       <% get_recently_viewed_products.each do |p| %>
         <li><%= link_to p.name, p %></li>
       <% end -%>
