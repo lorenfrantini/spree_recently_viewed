@@ -1,10 +1,13 @@
 # coding: utf-8
-version = File.read(File.expand_path('../VERSION', __FILE__)).strip
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
+
+require 'spree_recently_viewed/version'
 
 Gem::Specification.new do |s|
   s.platform     = Gem::Platform::RUBY
   s.name         = 'spree_recently_viewed'
-  s.version      = version
+  s.version      = SpreeRecentlyViewed::VERSION
   s.summary      = 'Adds recently viewed products to Spree Commerce'
   s.description  = s.summary
   s.required_ruby_version = '>= 1.9.3'
@@ -21,13 +24,10 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = true
 
-  spree_version = '~> 2.1.0.beta'
-  s.add_runtime_dependency 'spree_core', spree_version
-  s.add_runtime_dependency 'spree_frontend', spree_version
-  s.add_runtime_dependency 'spree_backend', spree_version
-  s.add_runtime_dependency 'spree_api', spree_version
+  s.add_runtime_dependency 'spree', '~> 2.0'
 
   s.add_development_dependency 'capybara', '~> 2.1'
+  s.add_development_dependency 'selenium-webdriver', '~> 2.33.0'
   s.add_development_dependency 'factory_girl', '~> 4.2'
   s.add_development_dependency 'ffaker', '~> 1.16'
   s.add_development_dependency 'rspec-rails', '~> 2.13'
@@ -36,5 +36,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'i18n-spec', '~> 0.4.0'
   s.add_development_dependency 'fuubar', '>= 0.0.1'
-  s.add_development_dependency 'pry'
+  s.add_development_dependency 'pry-rails'
 end
