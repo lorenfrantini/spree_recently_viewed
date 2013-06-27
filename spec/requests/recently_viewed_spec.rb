@@ -16,7 +16,7 @@ describe "Recently Viewed Products", js: true do
     page.has_content?(Spree.t(:recently_viewed_products))
     page.has_css?("nav#recently_viewed_products")
 
-    # within(:css, "nav#recently_viewed_products") do
+    # within("nav#recently_viewed_products") do
     #   page.should have_content "Mug"
     #   page.should have_content "Jersey"
     # end
