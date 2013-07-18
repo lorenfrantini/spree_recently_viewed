@@ -51,6 +51,6 @@ Copyright (c) 2013 Roman Smirnov, Brian Quinn, released under the [New BSD Licen
 
 [1]: http://www.fsf.org/licensing/essays/free-sw.html
 [2]: https://github.com/futhr/spree_recently_viewed/issues
-[3]: https://github.com/futhr/spree_recently_viewed/tree/master/LICENSE
+[3]: https://github.com/futhr/spree_recently_viewed/tree/master/LICENSE.md
 [4]: http://www.localeapp.com/projects/4923
 [5]: https://github.com/thoughtbot/guides
