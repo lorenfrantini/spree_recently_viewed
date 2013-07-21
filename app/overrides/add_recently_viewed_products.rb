@@ -5,5 +5,6 @@
 
 Deface::Override.new(virtual_path:  "spree/products/show",
                      name:          "add_recently_viewed_products_to_products_taxons",
-                     insert_bottom: "#related-items[data-hook], [data-hook='related-items']",
+#                     insert_bottom: "#related-items[data-hook], [data-hook='related-items']",
+					 insert_bottom: "[data-hook='product_right_part_wrap']",
                      partial:       "spree/shared/recently_viewed_products")
